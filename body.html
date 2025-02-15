@@ -1,163 +1,211 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O primăvară frumoasă!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O primăvară frumoasă!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
 
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            text-align: center;
-        }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: center;
+    }
 
-        h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3em;
-            color: #ffffff;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-            margin-top: 20px;
-        }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #395502;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
 
-        .snowdrop-container {
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+    .snowdrop-container {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
 
-        .flower {
-            position: relative;
-            width: 100px;
-            height: 160px; /* Ajustat */
-        }
+    .flower {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
 
-        .stem {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 3px;
-            height: 100px; /* Ajustat */
-            background-color: #228b22;
-            transform: translateX(-50%);
-        }
+    .stem1 {
+      position: absolute;
+      bottom: 0;
+      left: 97px;
+      width: 5px;
+      height: 130px;
+      background-color: #228b22;
+    }
 
-        .stem:after {
-            content: '';
-            position: absolute;
-            top: -10px; /* Ajustat */
-            left: -2px;
-            width: 8px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: #6b8e23;
-        }
+    .stem1top {
+      position: absolute;
+      bottom: 120px;
+      left: 62px;
+      width: 30px;
+      height: 20px;
+      border: 5px solid #228b22;
+      border-bottom: none;
+      border-top-left-radius: 40%;
+      border-top-right-radius: 70%;
+    }
 
-        .leaf {
-            position: absolute;
-            bottom: 25px; /* Ajustat */
-            width: 12px; /* Ajustat */
-            height: 60px; /* Ajustat */
-            background-color: #228b22;
-            border-radius: 5px;
-        }
+    .stem2 {
+      content: '';
+      position: absolute;
+      top: 58px;
+      left: 59px;
+      width: 14px;
+      height: 12px;
+      border-radius: 50%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: #6b8e23;
+      rotate: 10deg;
+    }
 
-        .leaf.left {
-            left: -15px;
-            transform-origin: bottom right;
-            transform: rotate(-18deg); /* Ajustat */
-        }
+    .leaf {
+      position: absolute;
+      bottom: 25px;
+      width: 7px;
+      height: 60px;
+      background-color: #228b22;
+      border-radius: 5px 2px;
+    }
 
-        .leaf.right {
-            right: -15px;
-            transform-origin: bottom left;
-            transform: rotate(18deg); /* Ajustat */
-        }
+    .leaf.left {
+      right: 96px;
+      transform-origin: bottom right;
+      transform: rotate(-17deg);
+    }
 
-        .flower-head {
-            position: absolute;
-            top: -30px; /* Ajustat */
-            left: calc(50% - 20px);
-            width: 40px;
-            height: 50px;
-            overflow: hidden;
-        }
+    .leaf.right {
+      left: 95px;
+      top: 100px;
+      transform-origin: bottom left;
+      transform: rotate(17deg);
+    }
 
-        .petal {
-            position: absolute;
-            width: 35px; /* Ajustat */
-            height: 45px; /* Ajustat */
-            background-color: #fff;
-            border-radius: 50% / 70%;
-            border-bottom: 2px solid #8fbc8f;
-            transform-origin: top center;
-            opacity: 0.9;
-        }
+    .flower-head {
+      position: absolute;
+      top: 40px;
+      width: 150px;
+      height: 100px;
+      transform: rotate(180deg);
+      overflow: hidden;
+    }
 
-        .petal:nth-child(1) {
-            transform: rotate(-95deg) translateX(-50%) translateY(); /* Ajustat */
-        }
+    .petal1 {
+      position: absolute;
+      width: 15px;
+      height: 45px;
+      left: 89px;
+      bottom: 25px;
+      background-color: #ffffff;
+      border-radius: 50% / 70%;
+      border-bottom: 2px solid #8fbc8f;
+      transform: rotate(15deg);
+      transform-origin: top center;
+      opacity: 0.9;
+    }
 
-        .petal:nth-child(2) {
-            transform: rotate(-5deg); /* Ajustat */
-        }
+    .petal2 {
+      position: absolute;
+      width: 15px;
+      height: 45px;
+      left: 100px;
+      bottom: 20px;
+      background-color: #ffffff;
+      border-radius: 50% / 70%;
+      border-bottom: 2px solid #8fbc8f;
+      transform: rotate(30deg);
+      transform-origin: top center;
+      opacity: 0.9;
+    }
 
-        .petal:nth-child(3) {
-            transform: rotate(95deg) translateX(50%) translateY(); /* Ajustat */
-        }
+    .petal3 {
+      position: absolute;
+      width: 15px;
+      height: 45px;
+      left: 77px;
+      bottom: 25px;
+      background-color: #ffffff;
+      border-radius: 50% / 70%;
+      border-bottom: 2px solid #8fbc8f;
+      transform-origin: top center;
+      opacity: 0.9;
+    }
 
-        .soil {
-            position: absolute;
-            bottom: -5px;
-            left: calc(50% - 25px);
-            width: 50px;
-            height: 15px;
-            background-color: #8b4513;
-            border-radius: 10px;
-        }
+    .soil {
+      position: absolute;
+      bottom: -5px;
+      left: calc(50% - 25px);
+      width: 50px;
+      height: 15px;
+      background-color: #8b4513;
+      border-radius: 10px;
+    }
 
-        .snowdrop {
-            display: inline-block;
-            animation: sway 6s ease-in-out infinite;
-        }
+    .snowdrop {
+      display: inline-block;
+      animation: sway 6s ease-in-out infinite;
+    }
 
-        @keyframes sway {
-            0% { transform: rotate(-2deg); }
-            50% { transform: rotate(2deg); }
-            100% { transform: rotate(-2deg); }
-        }
+    @keyframes sway {
+      0% {
+        transform: rotate(-2deg);
+      }
 
-        .flower-bg {
-            position: absolute;
-            opacity: 0.8;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-            animation: scrollDown 3s linear infinite;
-        }
+      50% {
+        transform: rotate(2deg);
+      }
 
-        @keyframes scrollDown {
-            0% { transform: translateY(-60px) rotate(0deg); }
-            100% { transform: translateY(110vh) rotate(360deg); }
-        }
-    </style>
+      100% {
+        transform: rotate(-2deg);
+      }
+    }
+
+    .flower-bg {
+      position: absolute;
+      opacity: 0.8;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+      animation: scrollDown 3s linear infinite;
+    }
+
+    @keyframes scrollDown {
+      0% {
+        transform: translateY(-60px) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <script>
-        const flowersCount = 25;
-        for (let i = 0; i < flowersCount; i++) {
-            const flower = document.createElement('div');
-            flower.className = 'flower-bg';
-            flower.innerHTML = `
+  <script>
+    const flowersCount = 25;
+    for (let i = 0; i < flowersCount; i++) {
+      const flower = document.createElement('div');
+      flower.className = 'flower-bg';
+      flower.innerHTML = `
                 <svg width="50" height="50" viewBox="0 0 50 50">
                     <circle cx="25" cy="25" r="4" fill="gold"/>
                     <circle cx="25" cy="25" r="12" fill="none" stroke="white" stroke-width="3"/>
@@ -171,32 +219,35 @@
                     <circle cx="20" cy="30" r="4" fill="white"/>
                 </svg>
             `;
-            flower.style.left = Math.random() * 100 + '%';
-            flower.style.top = "-60px";
-            const duration = 7 + Math.random() * 10;
-            flower.style.animationDuration = duration + "s";
-            flower.style.animationDelay = Math.random() * 5 + "s";
-            document.body.appendChild(flower);
-        }
-    </script>
+      flower.style.left = Math.random() * 100 + '%';
+      flower.style.top = "-60px";
+      const duration = 7 + Math.random() * 10;
+      flower.style.animationDuration = duration + "s";
+      flower.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(flower);
+    }
+  </script>
 
-    <div class="container">
-        <div class="snowdrop-container">
-            <div class="snowdrop">
-                <div class="flower">
-                    <div class="stem"></div>
-                    <div class="leaf left"></div>
-                    <div class="leaf right"></div>
-                    <div class="flower-head">
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                    </div>
-                    <div class="soil"></div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="snowdrop-container">
+      <div class="snowdrop">
+        <div class="flower">
+          <div class="stem1"></div>
+          <div class="stem1top"></div>
+          <div class="leaf left"></div>
+          <div class="leaf right"></div>
+          <div class="flower-head">
+            <div class="petal1"></div>
+            <div class="petal2"></div>
+            <div class="petal3"></div>
+          </div>
+            <div class="stem2"></div>
+          <!-- <div class="soil"></div> -->
         </div>
-        <h1>O primăvară frumoasă!</h1>
+      </div>
     </div>
+    <h1>O primăvară frumoasă!</h1>
+  </div>
 </body>
+
 </html>
